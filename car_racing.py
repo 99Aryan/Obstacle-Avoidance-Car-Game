@@ -5,9 +5,20 @@ import time
 import random
 from PIL import Image
 from pygame import mixer
-
+l=["pirates.mp3","bond.mp3"]
+print("1) Pirates of the Caribbean theme song")
+print("2) James Bond theme song")
+ch=int(input())
+if ch==1:
+    song=l[0]
+elif ch==2:
+    song=l[1]
+else:
+    print("Invalid choice")
+    print("Using default song - Pirates of the Caribbean")
+    song=l[0]
 mixer.init()
-mixer.music.load("pirates.mp3")
+mixer.music.load(song)
 pygame.init() #manadatory statement for python game initialization
 
 display_width=800
